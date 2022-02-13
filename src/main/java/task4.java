@@ -4,14 +4,13 @@ public class task4 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int x = in.nextInt();
-        int sum = 0;
-        for (int i=0; i<x; i++) {
+        int sum=0;
 
-            sum += x;
-        }
-
-        System.out.println(sum);
-
+        while ( x !=0) {
+            sum +=(x%10);
+            x /=10;
+       }
+          System.out.println(sum);
 
     }
 }

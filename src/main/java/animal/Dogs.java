@@ -1,4 +1,6 @@
-package Animal;
+package animal;
+
+import animal.abstracts.HomeAnimal;
 
 public class Dogs extends HomeAnimal {
     public int Size;
@@ -7,4 +9,5 @@ public class Dogs extends HomeAnimal {
         super(name, breed, color, gender);
         this.Size = Size;
     }
+
 }

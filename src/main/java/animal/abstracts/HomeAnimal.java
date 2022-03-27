@@ -1,7 +1,8 @@
-package Animal;
+package animal.abstracts;
+
 
 public abstract class HomeAnimal {
-    String name;
+    private String name;
     String breed;
     String color;
     String gender;
@@ -14,5 +15,13 @@ public abstract class HomeAnimal {
     }
     public void voice() {
         System.out.println(breed + " miau");
+    }
+
+    public void action() {
+        System.out.println(name + " run");
+    }
+
+    public String getName() {
+        return name;
     }
 }

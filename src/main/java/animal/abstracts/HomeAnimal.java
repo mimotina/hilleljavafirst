@@ -13,9 +13,6 @@ public abstract class HomeAnimal {
         this.color = color;
         this.gender = gender;
     }
-    public void voice() {
-        System.out.println(breed + " miau");
-    }
 
     public void action() {
         System.out.println(name + " run");
@@ -23,5 +20,9 @@ public abstract class HomeAnimal {
 
     public String getName() {
         return name;
+    }
+
+    public String getBreed() {
+        return breed;
     }
 }

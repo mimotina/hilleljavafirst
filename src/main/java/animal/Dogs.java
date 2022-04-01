@@ -10,4 +10,8 @@ public class Dogs extends HomeAnimal {
         this.Size = Size;
     }
 
+    @Override
+    public String action() {
+        return this.getName()+" run";
+    }
 }

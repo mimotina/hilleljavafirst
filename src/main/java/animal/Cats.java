@@ -16,4 +16,9 @@ public class Cats extends HomeAnimal {
 public void printName (){
     System.out.println(getName());
 }
+
+    @Override
+    public String action() {
+        return null;
+    }
 }

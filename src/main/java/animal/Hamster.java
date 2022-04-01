@@ -19,4 +19,9 @@ public final class Hamster extends Mouse {
     public String getYear(){
         return year;
     }
+
+    @Override
+    public String action() {
+        return null;
+    }
 }

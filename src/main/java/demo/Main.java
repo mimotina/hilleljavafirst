@@ -1,8 +1,9 @@
 package demo;
-
 import animal.Cats;
+import animal.Children;
 import animal.Dogs;
 import animal.Hamster;
+
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -11,10 +12,14 @@ public class Main {
         Hamster hamster = new Hamster("Rex", "djungarik", "white", "male", "has wool", "one month");
         cat.voice();
         cat.printName();
-        dog.action();
+        System.out.println(dog.action());
         hamster.eatcorn();
 
-      //  hamster.setYear(null);
+        Children child = new Children("Tom");
+        child.eat();
+        System.out.println(child.action());
+
+
         System.out.println(hamster.getYear()+" new year");
         String newYear = "2 months";
         if (!hamster.getYear().equals(newYear)) hamster.setYear(newYear);

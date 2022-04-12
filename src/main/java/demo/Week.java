@@ -1,13 +1,13 @@
 package demo;
 
 public enum Week {
-    Monday("Monday", 1),
-    Tuesday("Tuesday", 2),
-    Wednesday("Wednesday", 3),
-    Thursday("Thursday", 4),
-    Friday("Friday", 5),
-    Saturday("Saturday", 6),
-    Sunday("Sunday", 7);
+    MONDAY("Monday", 1),
+    TUESDAY("Tuesday", 2),
+    WEDNESDAY("Wednesday", 3),
+    THURSDAY("Thursday", 4),
+    FRIDAY("Friday", 5),
+    SATURDAY("Saturday", 6),
+    SUNDAY("Sunday", 7);
 
 
        private String name;

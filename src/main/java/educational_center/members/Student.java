@@ -13,7 +13,7 @@ public class Student extends Abstraction {
     private Week[] workingDay;
     private int year;
 
-    public Student(int quantity){
+    public Student(int quantity, Subjects[] learn){
         super(quantity);
         this.learn = new Subjects[quantity];
 
@@ -28,9 +28,9 @@ public class Student extends Abstraction {
         System.out.println(subject + " was not added");
     }
 
-
-    public Student(String name, String email, String subject, int year,  Week[] workingDay) {
-        super(name, email, subject);
+    public Student(String name, String email, Subjects[] learn, Week[] workingDay, int year) {
+        super(name, email);
+        this.learn = learn;
         this.workingDay = workingDay;
         this.year = year;
     }
@@ -69,11 +69,11 @@ public class Student extends Abstraction {
         return Objects.hash(year);
     }
 
-
     @Override
     public String toString() {
         return "Student{" +
-                "workingDay=" + Arrays.toString(workingDay) +
+                "learn=" + Arrays.toString(learn) +
+                ", workingDay=" + Arrays.toString(workingDay) +
                 ", year=" + year +
                 '}';
     }

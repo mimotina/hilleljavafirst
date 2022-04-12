@@ -5,7 +5,7 @@ public abstract class Abstraction {
     private String email;
     private String subject;
 
-    public Abstraction(String name,  String email, String subject) {
+    public Abstraction(String name, String email) {
         this.name = name;
         this.email = email;
         this.subject = subject;

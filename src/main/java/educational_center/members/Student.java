@@ -1,13 +1,13 @@
 package educational_center.members;
 
 import demo.Week;
-import educational_center.abstaction.Abstraction;
+import educational_center.abstaction.Personal_Data;
 import educational_center.abstaction.Subjects;
 
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Student extends Abstraction {
+public class Student extends Personal_Data {
 
     private Subjects [] learn;
     private Week[] workingDay;

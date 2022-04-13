@@ -1,7 +1,7 @@
 package educational_center.members;
 
 
-import educational_center.abstaction.Abstraction;
+import educational_center.abstaction.Personal_Data;
 
 public class Teacher {
     private Student[] course;
@@ -21,7 +21,7 @@ public class Teacher {
     }
 
     public void work() {
-        for (Abstraction e : course) {
+        for (Personal_Data e : course) {
             if (e != null) {
                 e.work();
                 if (e instanceof Student) {

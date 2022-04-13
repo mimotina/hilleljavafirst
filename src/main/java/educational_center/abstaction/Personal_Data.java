@@ -1,11 +1,11 @@
 package educational_center.abstaction;
 
-public abstract class Abstraction {
+public abstract class Personal_Data {
     private String name;
     private String email;
 
 
-    public Abstraction(String name, String email) {
+    public Personal_Data(String name, String email) {
         this.name = name;
         this.email = email;
 

@@ -29,8 +29,9 @@ public class Student extends Abstraction {
     }
 
 
-    public Student(String name, String email, String subject, int year,  Week[] workingDay) {
-        super(name, email, subject);
+    public Student(String name, String email, Subjects [] learn, int year,  Week[] workingDay) {
+        super(name, email);
+        this.learn = learn;
         this.workingDay = workingDay;
         this.year = year;
     }

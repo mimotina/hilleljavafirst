@@ -1,24 +1,21 @@
 package educational_center.members;
 
 import demo.Week;
-import educational_center.abstaction.Abstraction;
+import educational_center.abstaction.Personal_Data;
 import educational_center.abstaction.Subjects;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Set;
 
-public class Student extends Abstraction {
+public class Student extends Personal_Data {
 
-    private Subjects [] learn;
+    private Set<Subjects> learn;
     private Week[] workingDay;
     private int year;
 
-    public Student(int quantity){
-        super(quantity);
-        this.learn = new Subjects[quantity];
 
-    }
-    public void addSubject(Subjects subject){
+  /*  public void addSubject(Subjects subject){
         for(int i=0; i<learn.length; i++){
             if (learn[i] == null){
                 learn[i] = subject;
@@ -26,10 +23,9 @@ public class Student extends Abstraction {
             }
         }
         System.out.println(subject + " was not added");
-    }
+    }*/
 
-
-    public Student(String name, String email, Subjects [] learn, int year,  Week[] workingDay) {
+    public Student(String name, String email, Set<Subjects> learn, Week[] workingDay, int year) {
         super(name, email);
         this.learn = learn;
         this.workingDay = workingDay;
@@ -44,17 +40,19 @@ public class Student extends Abstraction {
         this.year = year;
     }
 
-    public Subjects[] getLearn() {
+    public Set<Subjects> getLearn() {
         return learn;
     }
 
-    public void setLearn(Subjects[] learn) {
+    public void setLearn(Set<Subjects> learn) {
         this.learn = learn;
     }
 
+
+
     @Override
     public void work() {
-        System.out.println(getName() + " studying " +getSubject()+ " " +  getYear());
+        System.out.println(getName() + " studying " + Arrays.toString(new Set[]{learn}) +" " +  getYear());
     }
 
     @Override
@@ -74,7 +72,8 @@ public class Student extends Abstraction {
     @Override
     public String toString() {
         return "Student{" +
-                "workingDay=" + Arrays.toString(workingDay) +
+                "learn=" + Arrays.toString(new Set[]{learn}) +
+                ", workingDay=" + Arrays.toString(workingDay) +
                 ", year=" + year +
                 '}';
     }

@@ -46,13 +46,4 @@ public static void productName() {
                 .collect(Collectors.toList());
         System.out.println("pricesAll " + pricesAll);}
 
-   /* public static void main(String[] args) {
-        productName();
-        productAbc();
-        priceHigh();
-        priceLow();
-        pricesAll();
-        products.forEach(productData -> System.out.println(productData));
-    }*/
-
-}
+  }

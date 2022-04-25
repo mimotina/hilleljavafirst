@@ -2,7 +2,6 @@ package demo;
 
 import lombok.*;
 
-import java.util.Objects;
 @Data
 @ToString
 @EqualsAndHashCode

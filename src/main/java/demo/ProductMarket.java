@@ -8,7 +8,7 @@ public  class ProductMarket {
     private List<Product> products;
     ProductMarket(List<Product> products) {this.products = products ; }
 
-    //public List<Product> getProducts(){return  products;}
+
       public List<String> productAbc() {
           return products
                   .stream()

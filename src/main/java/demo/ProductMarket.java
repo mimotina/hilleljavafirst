@@ -1,49 +1,47 @@
 package demo;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
 
-
 public  class ProductMarket {
-    static Product product1 = new Product("water", 10);
-    static Product product2 = new Product("sugar", 15);
-    static Product product3 = new Product("butter", 8);
-    static Product product4 = new Product("milk", 12);
-    static Product product5 = new Product("bread", 5);
 
-    static List<Product> products= List.of(product1,  product2, product3, product4, product5);
+    private List<Product> products;
+    ProductMarket(List<Product> products) {this.products = products ; }
 
-public static void productName() {
-    List<String> productName = products.stream()
-            .map(Product::getName).sorted()
-            .collect(Collectors.toList());
-     System.out.println("productName " + productName);
-}
+    //public List<Product> getProducts(){return  products;}
+      public List<String> productAbc() {
+          return products
+                  .stream()
+                  .map(Product::getName).sorted()
+                  .collect(Collectors.toList());
+    }
 
 
-   public static void productAbc() {
-        List<String> productAbc = products.stream()
+    public List<String> productName () {
+        return products
+                .stream()
                 .map(productData -> productData.getName().stripLeading())
                 .collect(Collectors.toList());
-        System.out.println("products by abc " + productAbc); }
+       }
 
-    public static void priceHigh() {
-        List<Product> priceHigh = products.stream()
+    public List<Product> priceHigh() {
+        return products
+                .stream()
                 .filter(productData -> productData.getPrice() > 10)
                 .collect(Collectors.toList());
-        System.out.println("priceHigh " + priceHigh); }
+       }
 
-    public static void priceLow(){
-        List<Product> priceLow = products.stream()
+    public List<Product> priceLow(){
+        return products
+                .stream()
                 .filter(productData -> productData.getPrice() < 0 )
                 .collect(Collectors.toList());
-        System.out.println("priceLow " + priceLow);}
+        }
 
-    public static void pricesAll(){
-        List<String> pricesAll = products.stream()
+    public List<String> pricesAll(){
+        return products.stream()
                 .map(priceAll -> Integer.toString(priceAll.getPrice()))
                 .collect(Collectors.toList());
-        System.out.println("pricesAll " + pricesAll);}
+        }
 
   }

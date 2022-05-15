@@ -11,6 +11,9 @@ public  class ProductMarket {
         this.products = products;
     }
 
+    public static void add(int i) {
+    }
+
     public List<String> productAbc() {
         return products
                 .stream()

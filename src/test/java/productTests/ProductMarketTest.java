@@ -46,7 +46,7 @@ public class ProductMarketTest {
         System.out.println(expectedResult);
             assertNotNull(productMarket.pricesAll());
             assertTrue(!productMarket.pricesAll().isEmpty(), "Product List is Empty");
-            assertEquals(expectedResult.toString() ,productMarket.pricesAll().toString());
+            assertEquals(expectedResult, productMarket.pricesAll());
 
     }
 
@@ -72,7 +72,7 @@ public class ProductMarketTest {
         assertTrue(productMarket.priceHigh().toString().contains("sugar"), "Product list doesn't have sugar");
         assertNotNull(productMarket.priceHigh());
         assertTrue(!productMarket.priceHigh().isEmpty(), "Product List is Empty");
-        assertEquals(expectedResult.toString() ,productMarket.priceHigh().toString());
+        assertEquals(expectedResult ,productMarket.priceHigh());
 
     }
 

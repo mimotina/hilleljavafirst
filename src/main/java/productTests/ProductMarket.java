@@ -31,7 +31,7 @@ public  class ProductMarket {
     public List<Product> priceHigh() {
         return products
                 .stream()
-                .filter(productData -> productData.getPrice() > 10)
+                .filter(priceHigh -> priceHigh.getPrice() > 10)
                 .collect(Collectors.toList());
     }
 
@@ -42,9 +42,9 @@ public  class ProductMarket {
                 .collect(Collectors.toList());
     }
 
-    public List<String> pricesAll() {
+    public List<Integer> pricesAll() {
         return products.stream()
-                .map(priceAll -> Integer.toString(priceAll.getPrice()))
+                .map(priceAll -> priceAll.getPrice())
                 .collect(Collectors.toList());
     }
 }

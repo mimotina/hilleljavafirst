@@ -1,4 +1,4 @@
-package demo;
+package productTests;
 import java.time.LocalDate;
 import java.util.List;
 
